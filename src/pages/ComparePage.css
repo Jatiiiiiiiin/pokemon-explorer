@@ -1,0 +1,66 @@
+.compare-page {
+  padding: 2rem 0;
+}
+
+.compare-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.compare-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.compare-description {
+  color: #666;
+}
+
+.pokemon-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.selector-label {
+  font-weight: 500;
+}
+
+.pokemon-select {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: white;
+}
+
+.comparison-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.comparison-card-wrapper {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .pokemon-selectors {
+    flex-direction: row;
+  }
+
+  .selector-container {
+    width: 50%;
+  }
+
+  .comparison-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

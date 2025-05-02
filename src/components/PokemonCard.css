@@ -3,11 +3,13 @@
   overflow: hidden;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 .pokemon-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .pokemon-card-header {
@@ -41,6 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .pokemon-image {
@@ -49,10 +52,34 @@
   object-fit: contain;
 }
 
+.favorite-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #ccc;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.favorite-button:hover {
+  color: #e3350d;
+}
+
+.favorite-button.active {
+  color: #e3350d;
+}
+
 .pokemon-types {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .type-badge {
@@ -62,4 +89,27 @@
   color: white;
   text-transform: capitalize;
   font-weight: 500;
+}
+
+.pokemon-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-name {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.stat-value {
+  font-weight: 600;
 }
